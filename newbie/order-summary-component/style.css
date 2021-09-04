@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-color1: hsl(225, 100%, 94%);
+  --primary-color2: hsl(245, 75%, 52%);
+  --primary-color3: hsl(245, 74%, 36%);
+  --primary-color4: hsl(245, 78%, 27%);
+  --neutral-color1: hsl(225, 100%, 98%);
+  --neutral-color2: hsl(224, 23%, 55%);
+  --neutral-color3: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--primary-color1);
+  display: grid;
+  place-items: center;
+  min-height: 120vh;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: var(--neutral-color3);
+  font-weight: 900;
+}
+
+p {
+  color: var(--neutral-color2);
+}
+
+a {
+  font-weight: 700;
+  color: var(--primary-color2);
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.container {
+  width: min(90%, 400px);
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero {
+  background-image: url("./images/illustration-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.content {
+  padding: 25px;
+  text-align: center;
+}
+
+.plan {
+  display: flex;
+  background-color: var(--neutral-color1);
+  margin: 30px 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.details {
+  margin-right: auto;
+  margin-left: 15px;
+}
+
+.details .name {
+  font-weight: 900;
+  color: var(--neutral-color3);
+}
+
+.details .price {
+  color: var(--neutral-color2);
+}
+
+.btn {
+  border: 0;
+  padding: 15px;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.proceed-button {
+  position: relative;
+  color: var(--neutral-color1);
+  background-color: var(--primary-color2);
+  box-shadow: 0 5px 20px rgba(46, 0, 250, 0.4);
+}
+
+.proceed-button:hover {
+  opacity: 0.6;
+}
+
+.cancel-button {
+  color: var(--neutral-color2);
+  background-color: transparent;
+  transition: 0.6s;
+}
+
+.cancel-button:hover {
+  color: var(--neutral-color3);
+}
