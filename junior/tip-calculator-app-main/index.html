@@ -1,44 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="logo" class="logo" />
+      <div class="wrapper">
+        <div class="input-section">
+          <label for="inputbill" class="label-input">Bill</label>
+          <div class="input-wrapper">
+            <i class="icons" id="dollar"></i>
+            <input
+              type="number"
+              placeholder="0"
+              id="inputbill"
+              class="input-data"
+            />
+          </div>
+        </div>
+        <div class="input-section">
+          <p class="label-input">Select Tip %</p>
+          <div class="p-wrapper">
+            <button class="p-button p-button-normal">5%</button>
+            <button class="p-button p-button-normal">10%</button>
+            <button class="p-button p-button-normal">15%</button>
+            <button class="p-button p-button-normal">25%</button>
+            <button class="p-button p-button-normal">50%</button>
+            <input
+              type="number"
+              name="p-custom"
+              id="p-custom"
+              placeholder="Custom"
+              class="input-data"
+            />
+          </div>
+        </div>
+        <div class="input-section">
+          <div class="label-status">
+            <label for="inputpeople" class="label-input"
+              >Number of People</label
+            >
+            <!-- <p class="invalid-status">Can't be zero</p> -->
+          </div>
+          <div class="input-wrapper">
+            <i class="icons" id="person"></i>
+            <input
+              type="number"
+              placeholder="0"
+              id="inputpeople"
+              class="input-data"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="display">
+          <div class="display-wrapper">
+            <div class="display-text">
+              <p class="display-label">Tip Amount</p>
+              <p class="display-unit">/ person</p>
+            </div>
+            <div class="display-result" id="result-amount">$0.00</div>
+          </div>
+          <div class="display-wrapper">
+            <div class="display-text">
+              <p class="display-label">Total</p>
+              <p class="display-unit">/ person</p>
+            </div>
+            <div class="display-result" id="result-total">$0.00</div>
+          </div>
+        </div>
+        <button class="reset-button" id="reset">RESET</button>
+      </div>
+    </main>
+    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
+    <!-- 
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>

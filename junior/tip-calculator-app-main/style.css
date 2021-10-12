@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --primary-color1: hsl(172, 67%, 45%);
+  --neutral-color1: hsl(183, 100%, 15%);
+  --neutral-color2: hsl(186, 14%, 43%);
+  --neutral-color3: hsl(184, 14%, 56%);
+  --neutral-color4: hsl(185, 41%, 84%);
+  --neutral-color5: hsl(189, 41%, 97%);
+  --neutral-color6: hsl(0, 0%, 100%);
+  --invalid-color: hsl(22, 100%, 42%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--neutral-color4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  max-width: 53rem;
+  width: 90%;
+  padding: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--neutral-color6);
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 25rem;
+  width: 48%;
+  display: flex;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.wrapper:nth-child(3) {
+  background-color: var(--neutral-color1);
+  width: 50%;
+  color: white;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.p-wrapper {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  gap: 1rem;
+}
+.p-button {
+  height: 2.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+}
+
+.p-button-normal {
+  color: var(--neutral-color6);
+  background-color: var(--neutral-color1);
+  cursor: pointer;
+}
+
+.p-button-normal:hover {
+  background-color: var(--neutral-color4);
+  color: var(--neutral-color1);
+}
+
+.p-button-selected {
+  background-color: var(--primary-color1);
+  color: var(--neutral-color1);
+  cursor: default;
+}
+
+.label-input {
+  margin-bottom: 0.5rem;
+  color: var(--neutral-color2);
+  font-weight: 700;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.icons {
+  width: 0.7rem;
+  height: 3rem;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0.8rem;
+}
+
+#dollar {
+  background-image: url("./images/icon-dollar.svg");
+}
+#person {
+  background-image: url("./images/icon-person.svg");
+}
+
+.input-data {
+  width: 100%;
+  text-align: right;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: 0;
+  background-color: var(--neutral-color5);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--neutral-color1);
+  border: 2px solid transparent;
+}
+
+.input-data::placeholder {
+  color: var(--neutral-color3);
+}
+
+.input-data:focus {
+  border: 2px solid var(--primary-color1);
+}
+
+#p-custom::placeholder {
+  text-align: center;
+}
+
+.label-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invalid-status {
+  color: var(--invalid-color);
+  font-weight: 700;
+}
+
+.invalid-input {
+  border: 2px solid var(--invalid-color);
+}
+
+.display-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+
+.display-text,
+.display-result {
+  width: 48%;
+}
+
+.display-label {
+  font-size: 0.9;
+  font-weight: 700;
+}
+.display-unit {
+  color: var(--neutral-color3);
+  font-size: 0.9rem;
+}
+
+.display-result {
+  color: var(--primary-color1);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+.reset-button {
+  background-color: var(--primary-color1);
+  padding: 0.8rem;
+  color: var(--neutral-color1);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 0;
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.reset-button-normal {
+  opacity: 1;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.reset-button-normal:hover {
+  background-color: var(--neutral-color4);
+  color: var(--neutral-color1);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
