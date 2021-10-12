@@ -168,6 +168,10 @@ main {
   border: 2px solid var(--invalid-color);
 }
 
+#people-err-msg {
+  display: none;
+}
+
 .display-wrapper {
   display: flex;
   justify-content: space-between;
@@ -181,7 +185,7 @@ main {
 
 .display-label {
   font-size: 0.9;
-  font-weight: 700;
+  font-weight: 500;
 }
 .display-unit {
   color: var(--neutral-color3);
@@ -233,6 +237,10 @@ main {
   }
   .input-section {
     margin-bottom: 1.5rem;
+  }
+
+  .icons {
+    width: 0.8rem;
   }
 }
 

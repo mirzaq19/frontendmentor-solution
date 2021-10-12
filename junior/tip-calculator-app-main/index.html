@@ -14,17 +14,6 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -45,11 +34,19 @@
         <div class="input-section">
           <p class="label-input">Select Tip %</p>
           <div class="p-wrapper">
-            <button class="p-button p-button-normal">5%</button>
-            <button class="p-button p-button-normal">10%</button>
-            <button class="p-button p-button-normal">15%</button>
-            <button class="p-button p-button-normal">25%</button>
-            <button class="p-button p-button-normal">50%</button>
+            <button class="p-button p-button-normal" data-value="5">5%</button>
+            <button class="p-button p-button-normal" data-value="10">
+              10%
+            </button>
+            <button class="p-button p-button-normal" data-value="15">
+              15%
+            </button>
+            <button class="p-button p-button-normal" data-value="25">
+              25%
+            </button>
+            <button class="p-button p-button-normal" data-value="50">
+              50%
+            </button>
             <input
               type="number"
               name="p-custom"
@@ -64,14 +61,14 @@
             <label for="inputpeople" class="label-input"
               >Number of People</label
             >
-            <!-- <p class="invalid-status">Can't be zero</p> -->
+            <p id="people-err-msg" class="invalid-status">Can't be zero</p>
           </div>
           <div class="input-wrapper">
             <i class="icons" id="person"></i>
             <input
               type="number"
               placeholder="0"
-              id="inputpeople"
+              id="inputperson"
               class="input-data"
             />
           </div>
@@ -84,27 +81,23 @@
               <p class="display-label">Tip Amount</p>
               <p class="display-unit">/ person</p>
             </div>
-            <div class="display-result" id="result-amount">$0.00</div>
+            <div class="display-result">
+              $<span id="result-amount">0.00</span>
+            </div>
           </div>
           <div class="display-wrapper">
             <div class="display-text">
               <p class="display-label">Total</p>
               <p class="display-unit">/ person</p>
             </div>
-            <div class="display-result" id="result-total">$0.00</div>
+            <div class="display-result">
+              $<span id="result-total">0.00</span>
+            </div>
           </div>
         </div>
         <button class="reset-button" id="reset">RESET</button>
       </div>
     </main>
-    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset -->
-    <!-- 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+    <script src="script.js"></script>
   </body>
 </html>
