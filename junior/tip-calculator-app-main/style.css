@@ -34,7 +34,7 @@ main {
   max-width: 53rem;
   width: 90%;
   padding: 1.8rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background-color: var(--neutral-color6);
   justify-content: space-between;
 }
@@ -51,7 +51,7 @@ main {
   min-height: 25rem;
   width: 48%;
   display: flex;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2rem;
@@ -216,6 +216,24 @@ main {
 .reset-button-normal:hover {
   background-color: var(--neutral-color4);
   color: var(--neutral-color1);
+}
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+  main {
+    flex-direction: column;
+    margin: 10rem 0;
+  }
+  .wrapper,
+  .wrapper:nth-child(3) {
+    width: 100%;
+    min-height: 0;
+  }
+  .input-section {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
